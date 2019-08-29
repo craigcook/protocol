@@ -6,15 +6,16 @@
 
 
 html {
+    background: $color-white;
     font-size: 100%;
-    background: #fff;
 }
 
 body {
     @include text-body-md;
-    background: #fff;
-    color: $color-black;
-    font-family: $font-base-family;
+    background: $color-white;
+    color: color-text-body();
+    font-family: font-body();
+    line-height: $font-base-line-height;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }

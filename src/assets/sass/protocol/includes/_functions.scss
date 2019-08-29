@@ -3,17 +3,21 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
+//* -------------------------------------------------------------------------- */
 // Convert pixel units to rems, assuming a 16px base size
 // Usage: remify(24px)
+
 @function remify($pixels) {
     $rems: $pixels / 16px;
     @return #{$rems}rem;
 }
 
 
+//* -------------------------------------------------------------------------- */
 // Replace `$search` with `$replace` in `$string`
 // @author Hugo Giraudel
 // Usage: str-replace($string, ' ', '-')
+
 @function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
 
@@ -23,3 +27,67 @@
 
   @return $string;
 }
+
+
+//* -------------------------------------------------------------------------- */
+// Different fonts for different brand themes.
+
+// Font family for title elements (headings).
+@function font-title() {
+    $font-family: $font-inter;
+
+    @if $brand-theme == 'firefox' { // Metropolis for Firefox
+        $font-family: $font-metropolis;
+    } @else if $brand-theme == 'mozilla' { // Zilla Slab for Mozilla
+        $font-family: $font-zilla-slab;
+    }
+
+    //output
+    @return $font-family;
+}
+
+// Font family for body text (everything else).
+// For now this is Inter for both brand themes, which makes this seem unneccessary,
+// but establishing this mechanism means we can change it in the future.
+@function font-body() {
+    $font-family: $font-inter;
+
+    @if $brand-theme == 'firefox' {
+        $font-family: $font-inter;
+    } @else if $brand-theme == 'mozilla' {
+        $font-family: $font-inter;
+    }
+
+    //output
+    @return $font-family;
+}
+
+
+//* -------------------------------------------------------------------------- */
+// Text color configuration - different colors for different brand themes.
+// This might move into a separate palette configuration later if we develop
+// more extensive color schemes.
+
+$text-colors: (
+    'mozilla': (
+        'text-body': $color-black,
+        'text-title': $color-black
+    ),
+    'firefox': (
+        'text-body': $color-ink-80,
+        'text-title': $color-ink-80
+    )
+);
+
+$color-map: map-get($text-colors, $brand-theme);
+
+// Text color for title elements (headings).
+@function color-text-title() {
+    @return map-get($color-map, 'text-title');
+}
+
+// Text color for body text (everything else).
+@function color-text-body() {
+    @return map-get($color-map, 'text-body');
+}
+

@@ -2,10 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../config';
+// Theme configuration options.
 
-// Import all the things!
-@import './node_modules/@mozilla-protocol/tokens/dist/index.scss';
-@import 'variables';
-@import 'functions';
-@import 'mixins';
+// Brand theme values: 'mozilla', 'firefox'
+$brand-theme: 'firefox' !global;
+
+// Type scale values: 'default', 'app-ui'
+$type-scale: 'default' !global;

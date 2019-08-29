@@ -1,0 +1,84 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+/* -------------------------------------------------------------------------- */
+// Theme demo
+
+$brand-theme: 'mozilla';   // or 'mozilla'
+$type-scale: 'app-ui';    // or 'app-ui'
+
+@import '../protocol/includes/lib';
+
+@import '../docs/protocol';
+@import '../docs/protocol-extra';
+
+
+.state {
+    font-size: 14px;
+    color: slategray;
+    border: 1px solid slategray;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 0 auto $layout-md;
+
+    .state-brand:after {
+        font-weight: bold;
+        content: $brand-theme;
+    }
+
+    .state-scale:after {
+        font-weight: bold;
+        content: $type-scale;
+    }
+}
+
+
+.title-color,
+.body-color {
+    border-radius: 6px;
+    color: white;
+    margin: 0 0 1em;
+    padding: $layout-md;
+    text-align: center;
+}
+
+.title-color {
+    background: color-text-title();
+}
+
+.body-color {
+    background: color-text-body();
+    margin-bottom: $layout-md;
+}
+
+
+
+//* -------------------------------------------------------------------------- */
+// Writing a component
+
+.label {
+    color: slategray;
+    font-size: 12px;
+    margin: 1em 0 0;
+}
+
+
+.scale-sample-title-xxl { @include text-title-xxl; }
+.scale-sample-title-xl { @include text-title-xl; }
+.scale-sample-title-lg { @include text-title-lg; }
+.scale-sample-title-md { @include text-title-md; }
+.scale-sample-title-sm { @include text-title-sm; }
+.scale-sample-title-xs { @include text-title-xs; }
+.scale-sample-title-xxs { @include text-title-xxs; }
+.scale-sample-title-xxxs { @include text-title-xxxs; }
+
+.scale-sample-body-xl { @include text-body-xl; }
+.scale-sample-body-lg { @include text-body-lg; }
+.scale-sample-body-md { @include text-body-md; }
+.scale-sample-body-sm { @include text-body-sm; }
+.scale-sample-body-xs { @include text-body-xs; }
+
+
+
+

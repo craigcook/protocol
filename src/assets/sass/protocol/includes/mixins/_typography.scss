@@ -45,72 +45,237 @@
 //  .subtitle { @include text-title-lg; }
 //  .intro { @include text-body-lg; }
 
-$text-body-line-height: $font-base-line-height;
-$text-title-line-height: 1.1;
-
-// display copy: headings, blockquotes, other fancy stuff
+// Display copy: headings, blockquotes, other fancy stuff
 @mixin text-title-xxl { // Use this one sparingly.
-    @include font-size(48px);
-    line-height: $text-title-line-height;
+    @if $brand-theme == 'mozilla' {
+        @include font-size(66px);
+        line-height: 1;
 
-    @media #{$mq-md} {
-        @include font-size(64px);
+        @media #{$mq-md} {
+            @include font-size(76px);
+        }
+    } @else {
+        @include font-size(56px);
+        line-height: 1.143;
+
+        @media #{$mq-md} {
+            @include font-size(64px);
+            line-height: 1.125;
+        }
+    }
+
+    @if $type-scale == 'app-ui' {
+        @include font-size(24px);
+
+        @media #{$mq-md} {
+            @include font-size(32px);
+        }
     }
 }
 
 @mixin text-title-xl {
-    @include font-size(40px);
-    line-height: $text-title-line-height;
-
-    @media #{$mq-md} {
+    @if $brand-theme == 'mozilla' {
         @include font-size(56px);
+        line-height: 1.1;
+
+        @media #{$mq-md} {
+            @include font-size(66px);
+        }
+    } @else {
+        @include font-size(48px);
+        line-height: 1.166;
+
+        @media #{$mq-md} {
+            @include font-size(56px);
+            line-height: 1.143;
+        }
+    }
+
+    @if $type-scale == 'app-ui' {
+        @include font-size(20px);
+
+        @media #{$mq-md} {
+            @include font-size(24px);
+        }
     }
 }
 
 @mixin text-title-lg {
-    @include font-size(32px);
-    line-height: $text-title-line-height;
-
-    @media #{$mq-md} {
+    @if $brand-theme == 'mozilla' {
         @include font-size(48px);
+        line-height: 1;
+
+        @media #{$mq-md} {
+            @include font-size(56px);
+        }
+    } @else {
+        @include font-size(40px);
+        line-height: 1.1;
+
+        @media #{$mq-md} {
+            @include font-size(48px);
+            line-height: 1.166;
+        }
+    }
+
+    @if $type-scale == 'app-ui' {
+        @include font-size(18px);
+
+        @media #{$mq-md} {
+            @include font-size(20px);
+        }
     }
 }
 
 @mixin text-title-md {
-    @include font-size(24px);
-    line-height: $text-title-line-height;
+    @if $brand-theme == 'mozilla' {
+        @include font-size(38px);
+        line-height: 1.05;
 
-    @media #{$mq-md} {
-        @include font-size(40px);
+        @media #{$mq-md} {
+            @include font-size(48px);
+            line-height: 1;
+        }
+    } @else {
+        @include font-size(32px);
+        line-height: 1.125;
+
+        @media #{$mq-md} {
+            @include font-size(40px);
+            line-height: 1.1;
+        }
+    }
+
+    @if $type-scale == 'app-ui' {
+        @include font-size(16px);
+
+        @media #{$mq-md} {
+            @include font-size(18px);
+        }
     }
 }
 
 @mixin text-title-sm {
-    @include font-size(21px);
-    line-height: $text-title-line-height;
+    @if $brand-theme == 'mozilla' {
+        @include font-size(28px);
+        line-height: 1.07;
 
-    @media #{$mq-md} {
-        @include font-size(32px);
+        @media #{$mq-md} {
+            @include font-size(38px);
+            line-height: 1.05;
+        }
+    } @else {
+        @include font-size(24px);
+        line-height: 1.166;
+
+        @media #{$mq-md} {
+            @include font-size(32px);
+            line-height: 1.125;
+        }
+    }
+
+    @if $type-scale == 'app-ui' {
+        @include font-size(16px);
+
+        @media #{$mq-md} {
+            @include font-size(16px);
+        }
     }
 }
 
 @mixin text-title-xs {
-    @include font-size(18px);
-    line-height: $text-title-line-height;
-
-    @media #{$mq-md} {
+    @if $brand-theme == 'mozilla' {
         @include font-size(24px);
+        line-height: 1.08;
+
+        @media #{$mq-md} {
+            @include font-size(28px);
+            line-height: 1.07;
+        }
+    } @else {
+        @include font-size(20px);
+        line-height: 1.2;
+
+        @media #{$mq-md} {
+            @include font-size(24px);
+            line-height: 1.166;
+        }
+    }
+
+    @if $brand-theme == 'mozilla' and $type-scale == 'app-ui' {
+        @include font-size(16px);
+
+        @media #{$mq-md} {
+            @include font-size(16px);
+        }
+    } @else if $type-scale == 'app-ui' {
+        @include font-size(14px);
+
+        @media #{$mq-md} {
+            @include font-size(14px);
+        }
     }
 }
 
 @mixin text-title-xxs {
-    @include font-size(16px);
-    line-height: $text-title-line-height;
+    @if $brand-theme == 'mozilla' {
+        @include font-size(18px);
+        line-height: 1.11;
+
+        @media #{$mq-md} {
+            @include font-size(24px);
+            line-height: 1.08;
+        }
+    } @else {
+        @include font-size(16px);
+        line-height: 1.25;
+
+        @media #{$mq-md} {
+            @include font-size(20px);
+            line-height: 1.2;
+        }
+    }
+
+    @if $brand-theme == 'mozilla' and $type-scale == 'app-ui' {
+        @include font-size(16px);
+
+        @media #{$mq-md} {
+            @include font-size(16px);
+        }
+    } @else if $type-scale == 'app-ui' {
+        @include font-size(14px);
+
+        @media #{$mq-md} {
+            @include font-size(14px);
+        }
+    }
+}
+
+@mixin text-title-xxxs {
+    @if $brand-theme == 'mozilla' {
+        @include font-size(18px);
+        line-height: 1.11;
+    } @else {
+        @include font-size(16px);
+        line-height: 1.25;
+    }
+
+    @if $brand-theme == 'mozilla' and $type-scale == 'app-ui' {
+        @include font-size(16px);
+
+        @media #{$mq-md} {
+            @include font-size(16px);
+        }
+    } @else if $type-scale == 'app-ui' {
+        @include font-size(14px);
+
+        @media #{$mq-md} {
+            @include font-size(14px);
+        }
+    }
 }
 
 // backwards compatibility
-
-$text-display-line-height: $text-title-line-height;
 @mixin text-display-xxl { @include text-title-xxl; }
 @mixin text-display-xl { @include text-title-xl; }
 @mixin text-display-lg { @include text-title-lg; }
@@ -120,29 +285,27 @@ $text-display-line-height: $text-title-line-height;
 @mixin text-display-xxs { @include text-title-xxs; }
 
 // body copy
+@mixin text-body-xl {
+    @include font-size(21px);
+}
+
 @mixin text-body-lg {
     @include font-size(18px);
-    line-height: $text-body-line-height;
 }
 
 @mixin text-body-md {
     @include font-size(16px);
-    line-height: $text-body-line-height;
 }
 
 @mixin text-body-sm {
     @include font-size(14px);
-    line-height: $text-body-line-height;
 }
 
 @mixin text-body-xs {
     @include font-size(12px);
-    line-height: $text-body-line-height;
 }
 
 @mixin text-body-cta {
     @include font-size(16px);
-    line-height: $text-body-line-height;
+    line-height: 1.1;
 }
-
-

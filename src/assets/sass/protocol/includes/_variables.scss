@@ -10,6 +10,16 @@ $font-inter: Inter, X-LocaleSpecific, sans-serif;
 $font-metropolis: Metropolis, Inter, X-LocaleSpecific, sans-serif;
 $font-zilla-slab: 'Zilla Slab', Inter, X-LocaleSpecific, sans-serif;
 
+
+$font-stack-base: Inter, X-LocaleSpecific, sans-serif;
+$font-stack-firefox: Metropolis, Inter, X-LocaleSpecific, sans-serif;
+$font-stack-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+$font-stack-mozilla: 'Zilla Slab', Inter, X-LocaleSpecific, sans-serif;
+
+
 $font-base-family: $font-inter;
 $font-base-size: 100%;
 $font-base-line-height: 1.5;
+
+$text-body-line-height: $font-base-line-height;
+$text-title-line-height: 1.1;
