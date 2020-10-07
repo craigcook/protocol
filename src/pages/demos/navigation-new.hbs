@@ -1,0 +1,383 @@
+---
+title: New Navigation
+layout: blank
+styles:
+  - navigation-new
+---
+
+{{#embed "patterns.organisms.navigation.navigation-new" logo=true download=true sticky=true id="navigation-demo"}}
+  {{#content "menu"}}
+    {{#embed "patterns.molecules.menu.menu-new"}}
+      {{#content "content"}}
+        <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+          <a class="mzp-c-menu-title" href="https://www.mozilla.org/firefox/browsers/" aria-haspopup="true" aria-controls="mzp-c-menu-panel-firefox">Firefox Browsers</a>
+          <div class="mzp-c-menu-panel" id="mzp-c-menu-panel-firefox">
+            <div class="mzp-c-menu-panel-container">
+              <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-firefox">Close Firefox Browsers menu</button>
+              <div class="mzp-c-menu-panel-content">
+                <ul class="mzp-l-rows-three">
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/logos/firefox/browser/logo-lg.png" link="https://www.mozilla.org/firefox/"}}
+                      {{#content "title"}}Firefox for Desktop{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Get the non-profit-backed browser on Windows, Mac or Linux.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/logos/firefox/browser/logo-lg.png" link="https://www.mozilla.org/firefox/mobile"}}
+                      {{#content "title"}}Firefox for Android{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Get the customizable mobile browser for Android smartphones.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/logos/firefox/browser/logo-lg.png" link="https://www.mozilla.org/firefox/mobile"}}
+                      {{#content "title"}}Firefox for iOS{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Get the mobile browser for your iPhone or iPad.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://www.mozilla.org/firefox/privacy/"}}
+                      {{#content "title"}}Privacy Promise{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Learn how Firefox treats your data with respect.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://blog.mozilla.org/firefox/"}}
+                      {{#content "title"}}Firefox Blog{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Read about new Firefox features and ways to stay safe online.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://www.mozilla.org/firefox/notes/" }}
+                      {{#content "title"}}Release Notes{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Get the details on the latest Firefox updates.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+          <a class="mzp-c-menu-title" href="https://www.mozilla.org/products/" aria-haspopup="true" aria-controls="mzp-c-menu-panel-products">Products</a>
+          <div class="mzp-c-menu-panel" id="mzp-c-menu-panel-products">
+            <div class="mzp-c-menu-panel-container">
+              <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-products">Close Products menu</button>
+              <div class="mzp-c-menu-panel-content">
+                <ul class="mzp-l-rows-four">
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/logos/firefox/monitor/logo-lg.png" link="https://monitor.firefox.com"}}
+                      {{#content "title"}}Firefox Monitor{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">See if your email has appeared in a company’s data breach.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/icons/image.svg" link="https://www.mozilla.org/firefox/facebookcontainer/"}}
+                      {{#content "title"}}Facebook Container{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Stop Facebook from collecting your data outside their app.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/logos/pocket/pocket.svg" link="https://www.getpocket.com"}}
+                      {{#content "title"}}Pocket{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Read and listen to articles from anywhere — distraction free.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/icons/image.svg"  link="https://vpn.mozilla.org/"}}
+                      {{#content "title"}}Mozilla VPN{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Get protection beyond your browser, on all your devices.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://www.mozilla.org/firefox/privacy/"}}
+                      {{#content "title"}}Product Promise{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Learn how each Firefox product protects and respects your data.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://relay.firefox.com"}}
+                      {{#content "title"}}Firefox Relay (beta){{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Spare your inbox with Firefox-generated email addresses for new accounts.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://fpn.firefox.com" }}
+                      {{#content "title"}}Firefox FPN (beta){{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Protect your browser’s connection to the internet.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+          <a class="mzp-c-menu-title" href="https://www.mozilla.org/about/" aria-haspopup="true" aria-controls="mzp-c-menu-panel-about">Who We Are</a>
+          <div class="mzp-c-menu-panel" id="mzp-c-menu-panel-about">
+            <div class="mzp-c-menu-panel-container">
+              <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-about">Close Who We Are menu</button>
+              <div class="mzp-c-menu-panel-content">
+                <ul class="mzp-l-rows-three">
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://www.mozilla.org/about/manifesto/"}}
+                      {{#content "title"}}The Mozilla Manifesto{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Learn about the values and principles that guide our mission.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://foundation.mozilla.org"}}
+                      {{#content "title"}}Mozilla Foundation{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Meet the non-profit behind Firefox that stands for a better web.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://www.mozilla.org/contribute/"}}
+                      {{#content "title"}}Get Involved{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Join the fight for a healthy internet.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://www.mozilla.org/about/leadership/"}}
+                      {{#content "title"}}Leadership{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Meet the team that's building technology for a better internet.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://careers.mozilla.org/"}}
+                      {{#content "title"}}Careers{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Work for a mission-driven organization that makes people-first products.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" link="https://blog.mozilla.org/"}}
+                      {{#content "title"}}Mozilla Blog{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Learn about Mozilla and the issues that matter to us.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+          <a class="mzp-c-menu-title" href="https://www.mozilla.org/technology/" aria-haspopup="true" aria-controls="mzp-c-menu-panel-innovation">Innovation</a>
+          <div class="mzp-c-menu-panel" id="mzp-c-menu-panel-innovation">
+            <div class="mzp-c-menu-panel-container">
+              <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-innovation">Close Innovation menu</button>
+              <div class="mzp-c-menu-panel-content">
+                <ul class="mzp-l-rows-four">
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/icons/image.svg" link="https://hubs.mozilla.com/"}}
+                      {{#content "title"}}Mozilla Hubs{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Gather in this interactive, online, multi-dimensional social space.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/logos/firefox/browser/developer/logo-lg.png" link="https://www.mozilla.org/firefox/developer/"}}
+                      {{#content "title"}}Firefox for Developers{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Get the Firefox browser built just for developers.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/icons/image.svg" link="https://developer.mozilla.org/"}}
+                      {{#content "title"}}MDN Web Docs{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Check out the home for web developer resources.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/icons/firefox-reality.svg" link="https://mixedreality.mozilla.org/firefox-reality"}}
+                      {{#content "title"}}Firefox Reality{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Explore the web with Firefox’s virtual reality browser.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/icons/image.svg" link="https://iot.mozilla.org/"}}
+                      {{#content "title"}}IoT{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Find out more about Mozilla’s Web Things</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/icons/image.svg" link="https://commonvoice.mozilla.org/"}}
+                      {{#content "title"}}Common Voice{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Donate your voice so the future of the web can hear everyone.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                  <li>
+                    {{#embed "patterns.molecules.menu.menu-item-new" icon="true" image="/assets/protocol/protocol/img/icons/image.svg" link="https://research.mozilla.org/webassembly/"}}
+                      {{#content "title"}}WebAssembly{{/content}}
+                      {{#content "desc"}}
+                        <p class="mzp-c-menu-item-desc">Learn more about the new, low-level, assembly-like language.</p>
+                      {{/content}}
+                    {{/embed}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      {{/content}}
+    {{/embed}}
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.navigation.sub-navigation"}}{{/embed}}
+
+<main>
+  <div class="mzp-l-content mzp-t-content-lg">
+    <h1 class="mzp-u-title-lg">New Navigation Demo</h1>
+
+    <p>Et pri porro ceteros tacimates, est at option dignissim intellegat.
+      Tollit fuisset urbanitas nec no, feugiat sensibus an mea, nominavi
+      <a href="#">interpretaris te eam</a>. No virtute imperdiet pro, ut pro
+      sint viderer philosophia. Torquatos necessitatibus sit in, ad sit summo
+      molestie adolescens, liber oratio veniam in per.</p>
+
+    <p>No qui option timeam impetus, dolor salutatus pertinacia ea eam, at
+      inani summo democritum vis. Est id quis admodum tractatos, ei ius
+      eligendi platonem, maiorum eleifend et eam. Ei odio cetero voluptatibus
+      ius, prima blandit epicurei te cum. Illud verterem principes vix te,
+      te pro tale dicit. Debitis senserit no quo, vix et altera mollis
+      scaevola. Sit no soleat aperiri vituperata. Qui <a href="#">id placerat
+      euripidis</a>.</p>
+
+    <h2 class="mzp-u-title-md">Tale augue splendide in quo</h2>
+
+    <ul class="mzp-u-list-styled">
+      <li>Diam repudiare vel cu.</li>
+      <li>Meis augue regione mei at, <a href="#">ornatus epicurei</a> ius eu.</li>
+      <li>Nam nemore consulatu et, alia hinc ex pro. Sumo rebum ea his, cu
+        possit nostro interesset has. Vide mollis eleifend cum cu, nec an
+        aeque simul concludaturque.</li>
+      <li>Eius omnium appellantur eam ne, pri an unum appellantur. Cu ius tota
+        posse dicant, autem quodsi evertitur eum no.</li>
+    </ul>
+
+    <h3 class="mzp-u-title-sm">Affert graeco eum id</h3>
+
+    <p>An quo epicurei placerat repudiare. Ut cetero molestiae mei, per id
+      efficiantur consectetuer, in paulo repudiare vim. Inermis delectus
+      adipiscing eos ad, sed ei graeci eleifend intellegam. Eu abhorreant
+      neglegentur duo, eu mei nisl mundi.</p>
+
+    <p>Ei scribentur liberavisse eos, ex omnesque torquatos intellegebat eum.
+      An etiam tation consulatu vim, mea cu option nominavi, ei cum reque mentitum.
+      Per ex iusto primis suavitate, at est natum latine aperiam. Sea an quaeque
+      noluisse, porro laoreet erroribus his eu. Nec dolore constituam ei, quod
+      mandamus te nec.</p>
+
+    <p>His liber fastidii inimicus eu, ne ius porro falli nominati, in quo exerci
+      sensibus splendide. Iuvaret iracundia interpretaris sit no, an congue
+      adolescens dissentiet cum.</p>
+
+    <h4 class="mzp-u-title-xs">Iuvaret iracundia interpretaris sit no</h4>
+
+    <p>Ei sit sale exerci vituperata. Malis gubergren neglegentur ne sit. Ea mel
+      dolore deserunt voluptatum. Ut quem sadipscing pri, verterem iracundia nam ei,
+      eum te verear menandri.</p>
+
+    <h4 class="mzp-u-title-xs">Mea putant malorum maiorum ad</h4>
+
+    <p>Mea putant malorum maiorum ad. His dolor putent eu. Sea in fugit nihil. Eum
+      mucius intellegat accommodare no, sed praesent persecuti scriptorem cu. Ei
+      falli conclusionemque qui, in expetenda hendrerit tincidunt ius.</p>
+
+    <h4 class="mzp-u-title-xs">Utinam gubergren sea id</h4>
+
+    <p>Utinam gubergren sea id, no nec ubique facete facilisis. Eu mel civibus
+      delicatissimi, nam esse suscipit voluptua ea. No unum liber primis est, ei
+      mea dicit fierent iudicabit. Ei falli minimum eam. Convenire similique pri
+      te, vim an putent principes.</p>
+
+  </div>
+
+</main>
+
+{{#embed "patterns.organisms.footer.footer-full-new"}}{{/embed}}
+
+
+<script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-menu-new.js"></script>
+<script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-navigation-new.js"></script>
+
+<script>
+(function() {
+    'use strict';
+
+    Mzp.Navigation.init({
+        onNavOpen: function() {
+            console.log('Navigation opened');
+        },
+        onNavClose: function() {
+            console.log('Navigation closed');
+        }
+    });
+
+    Mzp.Menu.init({
+        onMenuOpen: function() {
+            console.log('Menu opened');
+        },
+        onMenuClose: function() {
+            console.log('Menu closed');
+        },
+        onMenuButtonClose: function() {
+            console.log('Menu close button clicked');
+        }
+    });
+})();
+</script>

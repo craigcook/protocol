@@ -9,6 +9,7 @@
 
 .mzp-c-navigation {
     background: $color-white;
+    box-shadow: 0 0 1px 1px rgba(29, 17, 51, .04), 0 0 3px 2px rgba(9, 32, 77, .12), 0 0 2px -3px rgba(29, 17, 51, .12);
     color: $color-black;
 
     .mzp-c-navigation-l-content {
@@ -34,7 +35,7 @@
 
 .mzp-c-navigation-items {
     clear: both;
-    padding-top: $spacing-sm;
+    padding-top: $spacing-md;
 
     @media #{$mq-md} {
         clear: none;
@@ -76,63 +77,24 @@
 
 .mzp-c-navigation-logo {
     @include bidi(((float, left, right),));
+    line-height: 0;
 
-    a {
-        @include background-size(84px, 24px);
-        @include image-replaced;
-        background-image: url('#{$image-path}/logos/mozilla/black.svg');
-        background-repeat: no-repeat;
-        display: block;
-        height: 24px;
-        margin: 0 auto;
-        width: 84px;
+    .mzp-c-navigation-logo-image {
+        display: inline-block;
+        height: 32px;
+        width: auto;
     }
 
     @media #{$mq-md} {
-        @include bidi(((margin, $spacing-lg ($spacing-sm * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-sm * 2)),));
-
-        a {
-            margin-top: $spacing-sm;
-        }
+        @include bidi(((margin, $spacing-md ($spacing-sm * 2) $spacing-md 0, $spacing-md 0 $spacing-md ($spacing-sm * 2)),));
     }
 
     @media #{$mq-lg} {
-        @include bidi(((margin, $spacing-lg ($spacing-md * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-md * 2)),));
-
-        a {
-            @include background-size(112px, 32px);
-            height: 32px;
-            margin-top: $spacing-xs;
-            width: 112px;
-        }
+        @include bidi(((margin, $spacing-md ($spacing-md * 2) $spacing-md 0, $spacing-md 0 $spacing-md ($spacing-md * 2)),));
     }
 
     @media #{$mq-xl} {
-        @include bidi(((margin, $spacing-lg ($spacing-lg * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-lg * 2)),));
-    }
-
-    .mzp-t-firefox & {
-        a {
-            @include background-size(81px, 27px);
-            background-image: url('#{$image-path}/logos/firefox/logo-word-hor-sm.png');
-            height: 27px;
-            width: 81px;
-        }
-
-        @media #{$mq-md} {
-            a {
-                margin-top: 7px;
-            }
-        }
-
-        @media #{$mq-lg} {
-            a {
-                @include at2x('#{$image-path}/logos/firefox/logo-word-hor-sm.png', 109px, 36px);
-                height: 36px;
-                margin-top: 1px;
-                width: 109px;
-            }
-        }
+        @include bidi(((margin, $spacing-md ($spacing-lg * 2) $spacing-md 0, $spacing-md 0 $spacing-md ($spacing-lg * 2)),));
     }
 }
 
@@ -141,10 +103,12 @@
 
 .mzp-c-navigation-menu {
     vertical-align: bottom;
+    margin-bottom: -$spacing-md;
 
     @media #{$mq-md} {
         @include bidi(((margin-left, -$spacing-sm, margin-right, 0),));
         display: inline-block;
+        margin-bottom: 0;
         width: auto;
     }
 
@@ -158,9 +122,9 @@
 }
 
 /* -------------------------------------------------------------------------- */
-// Download button
+// Shoulder - usually contains a button
 
-.mzp-c-navigation-download {
+.mzp-c-navigation-shoulder {
     margin: $spacing-xl 0 $spacing-lg;
     text-align: center;
 
@@ -176,18 +140,18 @@
     @media #{$mq-md} {
         @include bidi((
             (float, right, left),
-            (margin, $spacing-lg 0 $spacing-lg $spacing-sm, $spacing-lg $spacing-sm $spacing-lg 0)
+            (margin, $spacing-md 0 $spacing-md $spacing-sm, $spacing-md $spacing-sm $spacing-md 0)
         ));
         display: block;
         margin: $spacing-lg 0;
     }
 
     @media #{$mq-lg} {
-        @include bidi(((margin, $spacing-lg 0 $spacing-lg $spacing-md, $spacing-lg $spacing-md $spacing-lg 0),));
+        @include bidi(((margin, $spacing-md 0 $spacing-md $spacing-md, $spacing-md $spacing-md $spacing-md 0),));
     }
 
     @media #{$mq-xl} {
-        @include bidi(((margin, $spacing-lg 0 $spacing-lg $spacing-lg, $spacing-lg $spacing-lg $spacing-lg 0),));
+        @include bidi(((margin, $spacing-md 0 $spacing-md $spacing-lg, $spacing-md $spacing-lg $spacing-md 0),));
     }
 }
 
@@ -208,9 +172,13 @@
 
     &:hover,
     &:active,
-    &:focus,
-    &.mzp-is-active  {
+    &:focus  {
         background-color: $color-marketing-gray-20;
+    }
+
+    &.mzp-is-active {
+        background-color: $color-marketing-gray-20;
+        background-image: url('#{$image-path}/icons/close.svg');
     }
 }
 

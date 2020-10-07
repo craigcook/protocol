@@ -8,7 +8,7 @@
     // check we have global variable
     if (typeof window.Mzp !== 'undefined') {
         var Mzp = window.Mzp;
-        var footerHeadings = '.mzp-c-footer-sections .mzp-c-footer-heading';
+        var footerHeadings = '.mzp-c-footer-section .mzp-c-footer-heading';
 
         // check we have global Supports and Details library
         if (typeof Mzp.Supports !== 'undefined' && typeof Mzp.Details !== 'undefined') {
