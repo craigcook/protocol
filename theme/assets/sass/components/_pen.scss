@@ -34,3 +34,20 @@
         color: get-theme('link-color-hover');
     }
 }
+
+.Pen-utils {
+    display: flex;
+    margin-inline-start: auto;
+}
+
+.Pen-bidi-controls {
+    padding: 0 $spacing-md;
+
+    label {
+        padding: 0 $spacing-xs;
+    }
+
+    abbr {
+        text-decoration: none;
+    }
+}

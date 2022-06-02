@@ -64,6 +64,10 @@ const fractalStatic = {
                     to: 'img/'
                 },
                 {
+                    from: path.resolve(__dirname, 'theme/assets/js'),
+                    to: 'js/'
+                },
+                {
                     from: path.resolve(__dirname, 'theme/assets/favicon.png'),
                     to: 'favicon.png'
                 },
