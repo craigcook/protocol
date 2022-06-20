@@ -6,19 +6,20 @@
     'use strict';
 
     // custom bidi toggle for component previews.
-    const bidi = window.document.querySelector('.Pen-bidi-controls');
-    const toggles = window.document.querySelectorAll('.Pen-bidi-controls .Pen-bidi-toggle');
+    const bidi = document.querySelector('.Pen-bidi-controls');
 
-    for (let i = 0; i < toggles.length; i++) {
-        toggles[i].addEventListener('click', function(e) {
+    document.body.addEventListener('click', (e) => {
+        if (e.target.classList.contains('Pen-bidi-toggle')) {
             const id = e.target.name;
-            const preview = document.querySelector('#' + id + ' .Preview-iframe').contentWindow.document;
+            const preview = document.querySelector(`#${id} .Preview-iframe`).contentWindow.document;
             if (preview) {
                 preview.documentElement.setAttribute('dir', e.target.value);
             }
-        });
-    }
+        }
+    }, true);
 
     // reset bidi control after page refresh
-    bidi.reset();
+    if (bidi) {
+        bidi.reset();
+    }
 })();
